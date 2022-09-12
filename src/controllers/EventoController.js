@@ -1,4 +1,4 @@
-const ModelProduto = require('../models/produto');
+const ModelEvento = require('../models/evento');
 
 module.exports =
 {
@@ -6,8 +6,8 @@ module.exports =
          res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         try {
-            const produtos = await ModelProduto.findAll();
-            return res.json(produtos);
+            const eventos = await ModelEvento.findAll();
+            return res.json(eventos);
 
         } catch (erro) {
             return console.error("Erro na List : ", erro);
@@ -21,15 +21,16 @@ module.exports =
     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
         
         try {
-            const produtos = await ModelProduto.create(
+            const eventos = await ModelEvento.create(
                 {
                    //Codigo: req.body.Codigo, // Comentado para gerar automatico
                     Descricao: req.body.Descricao,
                     DataCriacao: req.body.DataCriacao,
+                    DataEvento: req.body.DataEvento,
                     DataAtualizacao: null
                 }
             );
-            return res.json(produtos);
+            return res.json(eventos);
 
         } catch (erro) {
             return console.error("Erro na Create : ", erro);
@@ -39,7 +40,7 @@ module.exports =
     async Update(req, res) {
         try {
 
-            const prod = await ModelProduto.findByPk(req.body.Codigo);
+            const prod = await ModelEvento.findByPk(req.body.Codigo);
             if (prod) {
                 prod.Descricao = req.body.Descricao;
                 prod.DataAtualizacao = new Date();
@@ -56,7 +57,7 @@ module.exports =
     async GetOne(req, res) {
         try {
 
-            const prod = await ModelProduto.findByPk(req.body.Codigo);
+            const prod = await ModelEvento.findByPk(req.body.Codigo);
 
             return res.json(prod);
 
@@ -68,7 +69,7 @@ module.exports =
     async Delete(req, res) {
         try {
 
-            const prod = await ModelProduto.findByPk(req.body.Codigo);
+            const prod = await ModelEvento.findByPk(req.body.Codigo);
             await prod.destroy();
             return res.json(prod);
 

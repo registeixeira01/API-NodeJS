@@ -2,10 +2,10 @@ const sequelize = require('sequelize');
 const database = require('../db');
 const shema = "";
 
-class Produto extends sequelize.Model { }
+class Evento extends sequelize.Model { }
 
 
-Produto.init(
+Evento.init(
     {
         Codigo:
         {
@@ -13,6 +13,11 @@ Produto.init(
             autoIncrement: true,
             allowNull: false,
             primaryKey: true
+        },
+        OngResponsavel:
+        {
+            type: sequelize.STRING,
+            allowNull: false,
         },
         Descricao:
         {
@@ -24,15 +29,20 @@ Produto.init(
             type: sequelize.DATE,
             allowNull: false,
         },
-        DataAtualizacao:
+        DataEvento:
         {
             type: sequelize.DATE,
             allowNull: true,
+        },
+        DataAtualizacao:
+        {
+            type: sequelize.DATE,
+            allowNull: true,  
         }
     },
     {
-        sequelize: database, modelName: 'tbProduto', shema
+        sequelize: database, modelName: 'tbEvento', shema
     }
 )
 
-module.exports = Produto;
+module.exports = Evento;

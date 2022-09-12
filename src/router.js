@@ -1,17 +1,17 @@
 const express = require('express');
-const controllerProduto = require('./controllers/ProdutoController');
+const controllerEvento = require('./controllers/EventoController');
 
 const routes = express.Router();
 
-routes.get('/List', controllerProduto.List);
+routes.get('/List', controllerEvento.List);
 
-routes.post('/Create', controllerProduto.Create);
+routes.post('/Create', controllerEvento.Create);
 
-routes.post('/Update', controllerProduto.Update);
+routes.post('/Update', controllerEvento.Update);
 
-// routes.get('/GetOne', controllerProduto.GetOne);
-routes.post('/GetOne', controllerProduto.GetOne); // MUDAMOS PARA POST
+// routes.get('/GetOne', controllerEvento.GetOne);
+routes.post('/GetOne', controllerEvento.GetOne); // MUDAMOS PARA POST
 
-routes.post('/Delete', controllerProduto.Delete);
+routes.post('/Delete', controllerEvento.Delete);
 
 module.exports = routes;
