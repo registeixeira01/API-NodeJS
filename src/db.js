@@ -1,7 +1,7 @@
 const sequelize = require('sequelize');
-const database = new  sequelize('BaseNodeAula','sa','1234',
+const database = new  sequelize('registeixeira_PSH','registeixeira_PSH','123456',
 {
-    dialect:'mssql', host:'localhost',port:1433
+    dialect:'mssql', host:'localhost',port:4001
 });
 
 database.sync();
