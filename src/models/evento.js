@@ -17,7 +17,7 @@ Evento.init(
         OngResponsavel:
         {
             type: sequelize.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         Descricao:
         {
@@ -26,17 +26,17 @@ Evento.init(
         },
         DataCriacao:
         {
-            type: sequelize.DATE,
+            type: sequelize.DATEONLY,
             allowNull: false,
         },
         DataEvento:
         {
-            type: sequelize.DATE,
+            type: sequelize.DATEONLY,
             allowNull: true,
         },
         DataAtualizacao:
         {
-            type: sequelize.DATE,
+            type: sequelize.DATEONLY,
             allowNull: true,  
         }
     },
