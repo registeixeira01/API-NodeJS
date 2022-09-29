@@ -24,9 +24,9 @@ module.exports =
             const eventos = await ModelEvento.create(
                 {
                    //Codigo: req.body.Codigo, // Comentado para gerar automatico
+                    NomeEvento: req.body.NomeEvento, 
                     OngResponsavel: req.body.OngResponsavel,
                     Descricao: req.body.Descricao,
-                    DataCriacao: req.body.DataCriacao,
                     DataEvento: req.body.DataEvento,
                     DataAtualizacao: null
                 }

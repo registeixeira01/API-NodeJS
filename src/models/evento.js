@@ -14,6 +14,11 @@ Evento.init(
             allowNull: false,
             primaryKey: true
         },
+        NomeEvento:
+        {
+            type: sequelize.STRING,
+            allowNull: true,
+        },
         OngResponsavel:
         {
             type: sequelize.STRING,
@@ -23,11 +28,6 @@ Evento.init(
         {
             type: sequelize.STRING,
             allowNull: true,
-        },
-        DataCriacao:
-        {
-            type: sequelize.DATEONLY,
-            allowNull: false,
         },
         DataEvento:
         {
