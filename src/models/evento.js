@@ -34,6 +34,34 @@ Evento.init(
             type: sequelize.DATEONLY,
             allowNull: true,
         },
+        EnderecoEvento:{
+            type: sequelize.STRING,
+            allowNull: true,
+        },
+        NumeroEvento:{
+            type: sequelize.INTEGER,
+            allowNull: true,
+        },
+        BairroEvento:{
+            type: sequelize.STRING,
+            allowNull: true,
+        },
+        CidadeEvento:{
+            type: sequelize.STRING,
+            allowNull: true,
+        },
+        UfEvento:{
+            type: sequelize.STRING,
+            allowNull: true,
+        },
+        DuracaoEvento:{
+            type: sequelize.INTEGER,
+            allowNull: true,
+        },
+        PontuacaoHora:{
+            type: sequelize.INTEGER,
+            allowNull: true,
+        },
         DataAtualizacao:
         {
             type: sequelize.DATEONLY,

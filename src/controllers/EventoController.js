@@ -28,6 +28,13 @@ module.exports =
                     OngResponsavel: req.body.OngResponsavel,
                     Descricao: req.body.Descricao,
                     DataEvento: req.body.DataEvento,
+                    EnderecoEvento: req.body.EnderecoEvento,
+                    NumeroEvento: req.body.NumeroEvento,
+                    BairroEvento: req.body.BairroEvento,
+                    CidadeEvento: req.body.CidadeEvento,
+                    UfEvento: req.body.UfEvento,
+                    DuracaoEvento: req.body.DuracaoEvento,
+                    PontuacaoHora: req.body.PontuacaoHora,
                     DataAtualizacao: null
                 }
             );
