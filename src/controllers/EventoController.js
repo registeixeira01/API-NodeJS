@@ -2,7 +2,7 @@ const ModelEvento = require('../models/evento');
 
 module.exports =
 {
-    async List(req, res) {
+    async List(res) {
          res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         try {

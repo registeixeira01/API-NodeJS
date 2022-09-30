@@ -1,7 +1,7 @@
 const sequelize = require('sequelize');
-const database = new  sequelize('DB-PSH-EVENTOS','Regishas01','02052003',
+const database = new  sequelize('PshEventos','sa','02052003',
 {
-    dialect:'mssql', host:'DB-PSH-EVENTOS.mssql.somee.com'
+    dialect:'mssql', host:'localhost',port:1433
 });
 
 database.sync();
